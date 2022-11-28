@@ -7,7 +7,10 @@ const handleSearch = async (districtname,type) => {
   const getPdfContent = async (url) => {
     let content = ''
     try {
-      const browser = await puppeteer.launch();
+      const browser = await puppeteer.launch({
+        headless:false,
+        args: ["--no-sandbox"]
+      });
       const page = await browser.newPage();
       await page.setDefaultNavigationTimeout(60000);
       await page.goto(url, {waitUntil: "networkidle2"});
@@ -38,7 +41,10 @@ const handleSearch = async (districtname,type) => {
     return content
   }
   const hongheikuSearch = async function(name) {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      headless:false,
+      args: ["--no-sandbox"]
+    });
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(60000);
     let url = ""
@@ -86,7 +92,10 @@ const handleSearch = async (districtname,type) => {
   const getStatisticsData = async function(urlData) {
     let content = ''
     try {
-      const browser = await puppeteer.launch();
+      const browser = await puppeteer.launch({
+        headless:false,
+        args: ["--no-sandbox"]
+      });
       const page = await browser.newPage();
       await page.setDefaultNavigationTimeout(60000);
       await page.goto(urlData.url, {waitUntil: "networkidle2"});
