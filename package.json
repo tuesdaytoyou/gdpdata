@@ -1,0 +1,19 @@
+{
+  "name": "statisticsdata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/autoSearch.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.1.2",
+    "json2xls": "^0.1.2",
+    "node-xlsx": "^0.21.0",
+    "puppeteer": "^19.2.2",
+    "xlsx": "^0.17.5"
+  }
+}
