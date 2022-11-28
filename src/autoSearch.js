@@ -9,6 +9,7 @@ const handleSearch = async (districtname,type) => {
     try {
       const browser = await puppeteer.launch({
         headless:false,
+        executablePath: '/usr/bin/chromium-browser',
         args: ["--no-sandbox", "--disabled-setupid-sandbox"]
       });
       const page = await browser.newPage();
@@ -43,6 +44,7 @@ const handleSearch = async (districtname,type) => {
   const hongheikuSearch = async function(name) {
     const browser = await puppeteer.launch({
       headless:false,
+      executablePath: '/usr/bin/chromium-browser',
       args: ["--no-sandbox", "--disabled-setupid-sandbox"]
     });
     const page = await browser.newPage();
@@ -94,6 +96,7 @@ const handleSearch = async (districtname,type) => {
     try {
       const browser = await puppeteer.launch({
         headless:false,
+        executablePath: '/usr/bin/chromium-browser',
         args: ["--no-sandbox", "--disabled-setupid-sandbox"]
       });
       const page = await browser.newPage();
