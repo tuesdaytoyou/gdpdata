@@ -9,7 +9,7 @@ const handleSearch = async (districtname,type) => {
     try {
       const browser = await puppeteer.launch({
         headless:false,
-        args: ["--no-sandbox"]
+        args: ["--no-sandbox", "--disabled-setupid-sandbox"]
       });
       const page = await browser.newPage();
       await page.setDefaultNavigationTimeout(60000);
@@ -43,7 +43,7 @@ const handleSearch = async (districtname,type) => {
   const hongheikuSearch = async function(name) {
     const browser = await puppeteer.launch({
       headless:false,
-      args: ["--no-sandbox"]
+      args: ["--no-sandbox", "--disabled-setupid-sandbox"]
     });
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(60000);
@@ -94,7 +94,7 @@ const handleSearch = async (districtname,type) => {
     try {
       const browser = await puppeteer.launch({
         headless:false,
-        args: ["--no-sandbox"]
+        args: ["--no-sandbox", "--disabled-setupid-sandbox"]
       });
       const page = await browser.newPage();
       await page.setDefaultNavigationTimeout(60000);
